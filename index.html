@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pull Request</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#0d1117;
+  font-family:monospace;
+  color:#c9d1d9;
+}
+
+.container{
+  background:#161b22;
+  padding:40px;
+  border-radius:12px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.6);
+  max-width:720px;
+}
+
+.terminal{
+  white-space:pre-line;
+  min-height:160px;
+}
+
+.cursor{
+  display:inline-block;
+  width:8px;
+  background:#c9d1d9;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  0%{opacity:1}
+  50%{opacity:0}
+  100%{opacity:1}
+}
+
+.buttons{
+  margin-top:30px;
+  display:flex;
+  gap:15px;
+}
+
+button{
+  padding:12px 20px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:bold;
+}
+
+.approve{
+  background:#238636;
+  color:white;
+}
+
+.approve:hover{
+  background:#2ea043;
+}
+
+.maybe{
+  background:#30363d;
+  color:#c9d1d9;
+}
+
+.maybe:hover{
+  background:#484f58;
+}
+
+.title{
+  font-size:20px;
+  margin-bottom:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="title">Pull Request #3 — See You Again 💗</div>
+
+<div class="terminal" id="terminal"></div><span class="cursor"></span>
+
+<div class="buttons">
+<a href="https://wa.me/61420599795?text=Yes%20let%E2%80%99s%20plan%20date%203%20%F0%9F%92%97">
+<button class="approve">Approve Date #3</button>
+</a>
+
+<button class="maybe" onclick="alert('Alright… challenge accepted 😄 Looks like I need to plan something impressive.')">Maybe… convince me</button>
+</div>
+
+</div>
+
+<script>
+const text = `const meetings = 2;
+const vibe = "honestly amazing";
+
+if(meetings === 2){
+  console.log("I genuinely enjoyed the time we spent together.");
+  console.log("Great conversations. Easy laughs. Great company.");
+}
+
+// Proposed update
+// Schedule Date #3
+
+Question: When can I see you again?`;
+
+let i = 0;
+const speed = 35;
+
+function type(){
+  if(i < text.length){
+    document.getElementById("terminal").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, speed);
+  }
+}
+
+type();
+</script>
+
+</body>
+</html>
