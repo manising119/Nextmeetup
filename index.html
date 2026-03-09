@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Can I See You Again</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color:white;
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4,#fbc2eb,#a18cd1);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.container{
+  background:rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+  padding:40px;
+  border-radius:18px;
+  text-align:center;
+  max-width:600px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+p{
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+button{
+  padding:14px 24px;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.yes{
+  background:#25D366;
+  color:white;
+}
+
+.yes:hover{
+  transform:scale(1.05);
+}
+
+.maybe{
+  background:white;
+  color:#333;
+}
+
+.maybe:hover{
+  transform:scale(1.05);
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>When can I see you again? 💗</h1>
+
+<p>
+I had such an amazing time with you on our last dates. Every moment felt easy, fun, and genuinely special. 
+I really love spending time with you, and I'm already looking forward to the next one.
+</p>
+
+<div class="buttons">
+
+<a href="https://wa.me/61420599795?text=Yes%20I%20would%20love%20to%20see%20you%20again%20%F0%9F%92%97">
+<button class="yes">Yes, let’s plan it</button>
+</a>
+
+<a href="https://wa.me/61420599795?text=Maybe%20you%20should%20convince%20me%20about%20the%20next%20date%20%F0%9F%98%84">
+<button class="maybe">Maybe… convince me</button>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
